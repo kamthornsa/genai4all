@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หลักสูตรปัญญาประดิษฐ์สำหรับทุกคน - Generative AI for Everyone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Mobile Menu Button -->
+    <div class="lg:hidden fixed top-4 left-4 z-50">
+        <button id="menuToggle" class="bg-white p-2 rounded-lg shadow-lg">
+            <i class="fas fa-bars text-gray-700"></i>
+        </button>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto">
+        <div class="p-6">
+            <div class="hero-gradient p-6 rounded-xl text-white mb-6">
+                <h1 class="text-xl font-bold mb-2">
+                    <i class="fas fa-robot mr-2"></i>
+                    Generative AI for Everyone
+                </h1>
+                <p class="text-sm opacity-90">หลักสูตรปัญญาประดิษฐ์สำหรับทุกคน</p>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="space-y-2">
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 bg-gradient-to-r from-blue-500 to-purple-600 text-white active-menu"
+                    data-content="intro">
+                    <i class="fas fa-home mr-3"></i>
+                    <span class="text-sm font-medium">หน้าแรก</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="ai-basics">
+                    <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>
+                    <span class="text-sm font-medium">รู้จัก AI เบื้องต้น</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="ai-tools">
+                    <i class="fas fa-tools mr-3 text-blue-500"></i>
+                    <span class="text-sm font-medium">เครื่องมือ Generative AI</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="prompt-engineering">
+                    <i class="fas fa-code mr-3 text-green-500"></i>
+                    <span class="text-sm font-medium">Prompt Engineering</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="personal-development">
+                    <i class="fas fa-user-plus mr-3 text-purple-500"></i>
+                    <span class="text-sm font-medium">Prompt สำหรับพัฒนาตนเอง</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="government">
+                    <i class="fas fa-building mr-3 text-indigo-500"></i>
+                    <span class="text-sm font-medium">Prompt สำหรับภาครัฐ</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="marketing">
+                    <i class="fas fa-bullhorn mr-3 text-pink-500"></i>
+                    <span class="text-sm font-medium">Prompt สำหรับการตลาด</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="email-communication">
+                    <i class="fas fa-envelope mr-3 text-red-500"></i>
+                    <span class="text-sm font-medium">Prompt สำหรับอีเมล์</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="data-analysis">
+                    <i class="fas fa-chart-bar mr-3 text-teal-500"></i>
+                    <span class="text-sm font-medium">Prompt สำหรับวิเคราะห์ข้อมูล</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="media-creation">
+                    <i class="fas fa-image mr-3 text-orange-500"></i>
+                    <span class="text-sm font-medium">Prompt สำหรับสร้างรูปภาพ</span>
+                </div>
+
+                <div class="menu-item p-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-100"
+                    data-content="canva-ai">
+                    <i class="fas fa-palette mr-3 text-cyan-500"></i>
+                    <span class="text-sm font-medium">Canva AI สำหรับสื่อ</span>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lg:ml-80 min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b">
+            <div class="px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="lg:hidden">
+                        <h2 id="currentTitle" class="text-xl font-semibold text-gray-800">หน้าแรก</h2>
+                    </div>
+                    <div class="hidden lg:block">
+                        <h2 id="currentTitleDesktop" class="text-2xl font-bold text-gray-800">หน้าแรก</h2>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-calendar mr-1"></i>
+                            อัพเดท: ส.ค. 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <main class="p-6">
+            <div id="content-container" class="fade-in">
+                <!-- Content will be loaded here dynamically -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t mt-12">
+            <div class="px-6 py-8">
+                <div class="text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-purple-600 mr-2"></i>
+                        <span class="text-gray-600">Prompt by</span>
+                        <a href="mailto:kamthorn.sa@ksu.ac.th"
+                            class="text-purple-600 font-medium ml-2 hover:text-purple-700">
+                            kamthorn.sa@ksu.ac.th
+                        </a>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        <p>© 2025 หลักสูตรปัญญาประดิษฐ์สำหรับทุกคน - Generative AI for Everyone</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Overlay for mobile -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden hidden"></div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
