@@ -16,11 +16,557 @@
 
     <!-- Placeholder Content -->
     <div class="bg-white p-8 rounded-xl shadow-sm border">
-        <div class="text-center py-12">
-            <i class="fas fa-image text-6xl text-gray-300 mb-4"></i>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">เนื้อหากำลังพัฒนา</h3>
-            <p class="text-gray-500">Prompt สำหรับสร้างรูปภาพ</p>
-            <p class="text-gray-400 text-sm mt-2">DALL-E, Midjourney, Stable Diffusion</p>
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            <i class="fas fa-info-circle mr-3 text-orange-600"></i>
+            AI สำหรับการสร้างภาพ
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4">🎨 ประโยชน์ของ AI สร้างภาพ</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span class="text-gray-700">สร้างภาพได้รวดเร็วและไม่จำกัด</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span class="text-gray-700">ไม่ต้องมีทักษะศิลปะ</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span class="text-gray-700">ลองได้หลายสไตล์และแนวคิด</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <span class="text-gray-700">ประหยัดค่าจ้างนักออกแบบ</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4">🛠️ แพลตฟอร์มยอดนิยม</h4>
+                <div class="bg-orange-50 p-4 rounded-lg space-y-3">
+                    <div class="flex items-start">
+                        <i class="fas fa-robot text-orange-600 mr-2 mt-0.5"></i>
+                        <div>
+                            <span class="text-sm font-medium text-gray-700">DALL-E 3</span>
+                            <p class="text-xs text-gray-600">โดย OpenAI เข้าใจภาษาธรรมชาติดี</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-paint-brush text-orange-600 mr-2 mt-0.5"></i>
+                        <div>
+                            <span class="text-sm font-medium text-gray-700">Midjourney</span>
+                            <p class="text-xs text-gray-600">คุณภาพสูง เหมาะกับงานศิลปะ</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-cogs text-orange-600 mr-2 mt-0.5"></i>
+                        <div>
+                            <span class="text-sm font-medium text-gray-700">Stable Diffusion</span>
+                            <p class="text-xs text-gray-600">Open Source ปรับแต่งได้มาก</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Basic Techniques Section -->
+    <div class="bg-white p-8 rounded-xl shadow-sm border">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            <i class="fas fa-seedling mr-3 text-green-600"></i>
+            เทคนิคพื้นฐาน
+        </h3>
+
+        <div class="space-y-6">
+            <!-- Basic Composition Prompt -->
+            <div class="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl border">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-layer-group text-white text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">โครงสร้าง Prompt พื้นฐาน</h4>
+                        <p class="text-gray-600 text-sm">สูตรการเขียน Prompt ที่ได้ผลดี</p>
+                    </div>
+                    <button onclick="copyPrompt('basic-composition-prompt', event)"
+                        class="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition-colors">
+                        <i class="fas fa-copy mr-2"></i>Copy
+                    </button>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border-l-4 border-green-600 mb-4">
+                    <h5 class="font-semibold text-gray-800 mb-2">📝 Template</h5>
+                    <pre id="basic-composition-prompt" class="text-sm text-gray-700 whitespace-pre-wrap">โครงสร้าง Prompt ที่ได้ผลดี:
+
+[หัวข้อหลัก] + [รายละเอียด] + [สไตล์] + [คุณภาพ] + [ข้อกำหนดพิเศษ]
+
+องค์ประกอบสำคัญ:
+1. หัวข้อหลัก: [สิ่งที่ต้องการให้เป็นจุดโฟกัส]
+2. รายละเอียด: [ลักษณะ, สี, ท่าทาง, อารมณ์]
+3. สไตล์: [realistic, cartoon, anime, oil painting, watercolor]
+4. คุณภาพ: [high quality, 4K, ultra detailed, masterpiece]
+5. การจัดวาง: [composition, lighting, angle]
+6. บรรยากาศ: [mood, atmosphere, setting]
+
+ตัวอย่างโครงสร้าง:
+"A [subject] [doing what], [appearance details], [style], [lighting], [composition], [quality]"
+
+เคล็ดลับ:
+- ใช้คำเฉพาะเจาะจง แทนคำทั่วไป
+- เรียงลำดับความสำคัญจากมากไปน้อย
+- ใช้เครื่องหมายจุลภาค (,) คั่นรายละเอียด
+- หลีกเลี่ยงคำปฏิเสธ (ใช้ negative prompt แทน)
+- ทดลองปรับคำและดูผล</pre>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-semibold text-gray-800 mb-2">✨ ตัวอย่าง Prompt จริง</h5>
+                    <div class="text-sm text-gray-700 space-y-3">
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-blue-800 mb-1">📸 Portrait Photography:</p>
+                            <p class="italic">"A young woman with curly hair, wearing a vintage dress, smiling gently,
+                                golden hour lighting, shallow depth of field, professional photography, 85mm lens, soft
+                                warm tones, high quality, 4K"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-purple-800 mb-1">🎨 Digital Art:</p>
+                            <p class="italic">"A majestic dragon flying above ancient mountains, scales shimmering in
+                                moonlight, fantasy art style, dramatic lighting, epic composition, digital painting,
+                                highly detailed, trending on ArtStation"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-green-800 mb-1">🏢 Architecture:</p>
+                            <p class="italic">"Modern minimalist house with large glass windows, surrounded by nature,
+                                clean geometric lines, natural lighting, architectural photography, exterior view,
+                                contemporary design, ultra realistic"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Style Guide Prompt -->
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl border">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-palette text-white text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">คำสำคัญสำหรับสไตล์</h4>
+                        <p class="text-gray-600 text-sm">คำศัพท์ที่ใช้กำหนดสไตล์ภาพ</p>
+                    </div>
+                    <button onclick="copyPrompt('style-guide-prompt', event)"
+                        class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-copy mr-2"></i>Copy
+                    </button>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border-l-4 border-blue-600">
+                    <h5 class="font-semibold text-gray-800 mb-2">🎨 คำสำคัญสำหรับสไตล์</h5>
+                    <div id="style-guide-prompt" class="text-sm text-gray-700 space-y-4">
+                        <div>
+                            <p class="font-medium text-blue-800 mb-2">📷 Photography Styles:</p>
+                            <p>• <strong>Portrait:</strong> headshot, close-up, professional photography, studio
+                                lighting</p>
+                            <p>• <strong>Landscape:</strong> wide angle, golden hour, natural lighting, scenic view</p>
+                            <p>• <strong>Street:</strong> candid, urban, documentary style, natural moment</p>
+                            <p>• <strong>Fashion:</strong> editorial, high fashion, runway, glamour shot</p>
+                        </div>
+
+                        <div>
+                            <p class="font-medium text-purple-800 mb-2">🎨 Art Styles:</p>
+                            <p>• <strong>Realistic:</strong> photorealistic, hyperrealistic, detailed, lifelike</p>
+                            <p>• <strong>Cartoon:</strong> animated, cute, colorful, simple shapes</p>
+                            <p>• <strong>Anime:</strong> manga style, Japanese animation, cel shading</p>
+                            <p>• <strong>Oil Painting:</strong> classical art, brush strokes, renaissance style</p>
+                            <p>• <strong>Watercolor:</strong> soft, flowing, transparent, artistic</p>
+                        </div>
+
+                        <div>
+                            <p class="font-medium text-green-800 mb-2">🌟 Quality Keywords:</p>
+                            <p>• <strong>High Quality:</strong> 4K, 8K, ultra detailed, masterpiece, best quality</p>
+                            <p>• <strong>Professional:</strong> award winning, trending on ArtStation, behance</p>
+                            <p>• <strong>Technical:</strong> sharp focus, perfect lighting, professional grade</p>
+                        </div>
+
+                        <div>
+                            <p class="font-medium text-orange-800 mb-2">💡 Lighting:</p>
+                            <p>• <strong>Natural:</strong> golden hour, soft lighting, natural light, sunlight</p>
+                            <p>• <strong>Dramatic:</strong> moody lighting, high contrast, cinematic lighting</p>
+                            <p>• <strong>Studio:</strong> professional lighting, controlled lighting, clean lighting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Specific Section -->
+    <div class="bg-white p-8 rounded-xl shadow-sm border">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            <i class="fas fa-rocket mr-3 text-purple-600"></i>
+            เทคนิคเฉพาะแพลตฟอร์ม
+        </h3>
+
+        <div class="space-y-6">
+            <!-- DALL-E Prompt -->
+            <div class="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl border">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-robot text-white text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">DALL-E 3 Techniques</h4>
+                        <p class="text-gray-600 text-sm">เทคนิคการใช้ DALL-E 3 ให้ได้ผลดีที่สุด</p>
+                    </div>
+                    <button onclick="copyPrompt('dalle-techniques-prompt', event)"
+                        class="px-4 py-2 bg-purple-600 text-white text-sm rounded-lg hover:bg-purple-700 transition-colors">
+                        <i class="fas fa-copy mr-2"></i>Copy
+                    </button>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border-l-4 border-purple-600 mb-4">
+                    <h5 class="font-semibold text-gray-800 mb-2">🤖 DALL-E 3 Best Practices</h5>
+                    <pre id="dalle-techniques-prompt"
+                        class="text-sm text-gray-700 whitespace-pre-wrap">DALL-E 3 เข้าใจภาษาธรรมชาติได้ดี สามารถเขียน Prompt แบบประโยคได้
+
+จุดเด่น DALL-E 3:
+• เข้าใจคำสั่งที่ซับซ้อน
+• ทำตามคำอธิบายได้แม่นยำ
+• สร้างข้อความในภาพได้
+• ไม่ต้องใช้คำสั่งพิเศษมาก
+
+เทคนิคสำหรับ DALL-E 3:
+1. ใช้ประโยคธรรมชาติ: "Create an image of..."
+2. อธิบายรายละเอียดชัดเจน
+3. ระบุอารมณ์และบรรยากาศ
+4. ใช้คำที่เฉพาะเจาะจง
+
+ตัวอย่างที่ดี:
+"Create a cozy coffee shop interior with warm lighting, wooden furniture, plants by the windows, and customers reading books. The atmosphere should feel welcoming and peaceful, with soft jazz music implied through the relaxed poses of the people."
+
+ตัวอย่างสำหรับธุรกิจ:
+"Design a modern company logo for a tech startup called 'CloudSync', featuring clean geometric shapes in blue and white, minimalist style, professional and trustworthy appearance."</pre>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-semibold text-gray-800 mb-2">✨ ตัวอย่าง DALL-E 3 Prompts</h5>
+                    <div class="text-sm text-gray-700 space-y-3">
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-purple-800 mb-1">🎨 Creative Art:</p>
+                            <p class="italic">"A surreal landscape where giant books float in the sky like clouds, with
+                                a small figure reading on a hilltop below, dreamlike atmosphere, soft pastel colors,
+                                whimsical and inspiring mood"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-blue-800 mb-1">📱 Social Media:</p>
+                            <p class="italic">"An Instagram-worthy flat lay of a workspace featuring a laptop, coffee
+                                cup, succulents, notebooks, and wireless headphones, arranged aesthetically on a white
+                                marble desk, bright natural lighting"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-green-800 mb-1">🏪 E-commerce:</p>
+                            <p class="italic">"Product photography of handmade ceramic mugs in earthy tones, arranged on
+                                a rustic wooden table with soft morning light, clean background, professional commercial
+                                photography style"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midjourney Prompt -->
+            <div class="bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-xl border">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-paint-brush text-white text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Midjourney Mastery</h4>
+                        <p class="text-gray-600 text-sm">เทคนิคขั้นสูงสำหรับ Midjourney</p>
+                    </div>
+                    <button onclick="copyPrompt('midjourney-techniques-prompt', event)"
+                        class="px-4 py-2 bg-orange-600 text-white text-sm rounded-lg hover:bg-orange-700 transition-colors">
+                        <i class="fas fa-copy mr-2"></i>Copy
+                    </button>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border-l-4 border-orange-600 mb-4">
+                    <h5 class="font-semibold text-gray-800 mb-2">🎯 Midjourney Advanced Techniques</h5>
+                    <pre id="midjourney-techniques-prompt" class="text-sm text-gray-700 whitespace-pre-wrap">Midjourney มีคุณภาพสูง เหมาะกับงานศิลปะและการออกแบบ
+
+Parameters สำคัญ:
+• --ar 16:9 (aspect ratio)
+• --v 6 (version)
+• --style raw (ลดการตีความ)
+• --s 250 (stylize level)
+• --c 20 (chaos level)
+
+เทคนิคขั้นสูง:
+1. Multi-prompting: ใช้ :: แยกส่วน
+2. Image Prompting: อัพโหลดรูปอ้างอิง
+3. Permutation Prompts: {option1, option2}
+4. Negative Prompts: --no [สิ่งที่ไม่ต้องการ]
+
+โครงสร้าง Prompt:
+[Subject] [Action/Pose] [Environment] [Lighting] [Style] [Parameters]
+
+ตัวอย่าง Multi-prompting:
+"Portrait of a warrior::2 ancient armor::1.5 mountain background::1 golden hour lighting::1 --ar 2:3 --v 6"
+
+ตัวอย่าง Permutation:
+"{Red, Blue, Green} sports car in a modern city, professional photography --ar 16:9"
+
+คำสำคัญพิเศษ:
+• "in the style of [artist name]"
+• "shot on [camera model]"
+• "trending on ArtStation"
+• "octane render"
+• "unreal engine"</pre>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-semibold text-gray-800 mb-2">✨ ตัวอย่าง Midjourney Prompts</h5>
+                    <div class="text-sm text-gray-700 space-y-3">
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-orange-800 mb-1">🏛️ Architecture:</p>
+                            <p class="italic">"Futuristic building with organic curves, glass and steel materials,
+                                surrounded by nature, architectural photography, dramatic lighting, ultra realistic --ar
+                                16:9 --v 6"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-red-800 mb-1">👤 Character Design:</p>
+                            <p class="italic">"Cyberpunk character with neon implants, leather jacket, city lights
+                                reflection, portrait photography style, moody lighting --ar 2:3 --style raw --v 6"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-pink-800 mb-1">🎨 Abstract Art:</p>
+                            <p class="italic">"Abstract expressionist painting, bold brushstrokes, vibrant colors,
+                                emotional energy, in the style of Jackson Pollock --ar 1:1 --s 750 --v 6"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Applications Section -->
+    <div class="bg-white p-8 rounded-xl shadow-sm border">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            <i class="fas fa-briefcase mr-3 text-teal-600"></i>
+            การใช้งานเชิงธุรกิจ
+        </h3>
+
+        <div class="space-y-6">
+            <!-- Business Graphics Prompt -->
+            <div class="bg-gradient-to-br from-teal-50 to-cyan-100 p-6 rounded-xl border">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-chart-line text-white text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">กราฟิกสำหรับธุรกิจ</h4>
+                        <p class="text-gray-600 text-sm">สร้างภาพสำหรับการตลาดและการนำเสนอ</p>
+                    </div>
+                    <button onclick="copyPrompt('business-graphics-prompt', event)"
+                        class="px-4 py-2 bg-teal-600 text-white text-sm rounded-lg hover:bg-teal-700 transition-colors">
+                        <i class="fas fa-copy mr-2"></i>Copy
+                    </button>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border-l-4 border-teal-600 mb-4">
+                    <h5 class="font-semibold text-gray-800 mb-2">💼 Business Graphics Templates</h5>
+                    <pre id="business-graphics-prompt"
+                        class="text-sm text-gray-700 whitespace-pre-wrap">เทมเพลตสำหรับธุรกิจ:
+
+🏢 Corporate/Professional:
+"Professional [subject], clean modern design, corporate colors (blue, white, gray), minimalist style, high quality, business appropriate"
+
+📱 Social Media Posts:
+"Instagram post design, [topic], vibrant colors, engaging layout, text space, social media optimized, eye-catching, modern typography"
+
+🛍️ E-commerce Products:
+"Product photography of [item], white background, professional lighting, commercial photography, high resolution, clean presentation, Amazon listing style"
+
+📊 Infographics:
+"Modern infographic design, [data/topic], clean layout, professional colors, easy to read, business presentation style, vector graphics style"
+
+🎯 Marketing Materials:
+"Marketing banner for [business/product], professional design, call-to-action, brand colors, modern typography, conversion-focused layout"
+
+📧 Email Headers:
+"Email newsletter header, [business name], professional design, branded colors, clean layout, email-optimized dimensions"
+
+🎨 Logo Design:
+"Modern logo design for [company name], [industry], minimalist, memorable, scalable, professional, timeless design"</pre>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-semibold text-gray-800 mb-2">✨ ตัวอย่างธุรกิจจริง</h5>
+                    <div class="text-sm text-gray-700 space-y-3">
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-teal-800 mb-1">🍕 ร้านพิซซ่า:</p>
+                            <p class="italic">"Instagram post for pizza restaurant, delicious margherita pizza, melted
+                                cheese, fresh basil, wood-fired oven background, warm lighting, appetizing food
+                                photography, social media ready"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-blue-800 mb-1">💻 Tech Startup:</p>
+                            <p class="italic">"Professional team photo for tech company website, diverse group of
+                                developers, modern office background, confident poses, natural lighting, corporate
+                                photography style"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-green-800 mb-1">🏪 Online Store:</p>
+                            <p class="italic">"Product banner for online fashion store, summer collection, bright
+                                colors, lifestyle photography, young models, beach setting, commercial advertisement
+                                style"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Creation Prompt -->
+            <div class="bg-gradient-to-br from-pink-50 to-rose-100 p-6 rounded-xl border">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-share-alt text-white text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Content สำหรับโซเชียล</h4>
+                        <p class="text-gray-600 text-sm">สร้างภาพสำหรับโซเชียลมีเดีย</p>
+                    </div>
+                    <button onclick="copyPrompt('social-content-prompt', event)"
+                        class="px-4 py-2 bg-pink-600 text-white text-sm rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fas fa-copy mr-2"></i>Copy
+                    </button>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border-l-4 border-pink-600 mb-4">
+                    <h5 class="font-semibold text-gray-800 mb-2">📱 Social Media Content Templates</h5>
+                    <pre id="social-content-prompt"
+                        class="text-sm text-gray-700 whitespace-pre-wrap">เทมเพลตสำหรับโซเชียลมีเดีย:
+
+📸 Instagram Feed Posts:
+"Instagram post, [topic], aesthetic flat lay, bright natural lighting, minimalist composition, Instagram-worthy, high engagement potential"
+
+📖 Instagram Stories:
+"Instagram story template, [content], mobile-optimized, vertical format, eye-catching design, story-friendly layout"
+
+📌 Pinterest Pins:
+"Pinterest-style image, [topic], vertical format, text overlay, pinnable design, bright colors, DIY/lifestyle aesthetic"
+
+📘 Facebook Posts:
+"Facebook post image, [topic], family-friendly, engaging visual, horizontal format, Facebook-optimized dimensions"
+
+🐦 Twitter Headers:
+"Twitter header design, [brand/personal], professional, brand colors, social media dimensions, Twitter-optimized"
+
+💼 LinkedIn Posts:
+"Professional LinkedIn post image, [business topic], corporate style, industry-appropriate, networking-focused, business professional"
+
+🎬 YouTube Thumbnails:
+"YouTube thumbnail, [video topic], bold text, bright colors, clickable design, 16:9 format, high contrast, engaging"</pre>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-semibold text-gray-800 mb-2">✨ ตัวอย่างคอนเทนต์</h5>
+                    <div class="text-sm text-gray-700 space-y-3">
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-pink-800 mb-1">☕ Coffee Shop:</p>
+                            <p class="italic">"Instagram story of barista making latte art, behind-the-scenes view, warm
+                                coffee shop atmosphere, vertical format, engaging for coffee lovers"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-purple-800 mb-1">🎯 Fitness Coach:</p>
+                            <p class="italic">"Motivational fitness quote overlay on image of person exercising
+                                outdoors, sunrise background, inspirational mood, Instagram post format"</p>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <p class="font-medium text-orange-800 mb-1">📚 Education:</p>
+                            <p class="italic">"Pinterest pin for study tips, organized desk setup, colorful stationery,
+                                clean aesthetic, educational content, vertical format, pinnable design"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Tips Section -->
+    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl border">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            <i class="fas fa-magic mr-3 text-indigo-600"></i>
+            เคล็ดลับขั้นสูง
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg">
+                <h4 class="font-bold text-gray-800 mb-4">💡 Do's - สิ่งที่ควรทำ</h4>
+                <div class="space-y-3 text-sm text-gray-600">
+                    <div class="flex items-start">
+                        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">1</span>
+                        <span>ใช้คำเฉพาะเจาะจง แทนคำทั่วไป</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">2</span>
+                        <span>เรียงลำดับความสำคัญในประโยค</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">3</span>
+                        <span>ทดลองหลาย version และเปรียบเทียบ</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">4</span>
+                        <span>ใช้ reference images เมื่อเป็นไปได้</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">5</span>
+                        <span>ศึกษา prompt ของผู้อื่นที่ได้ผลดี</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg">
+                <h4 class="font-bold text-gray-800 mb-4">❌ Don'ts - สิ่งที่ควรหลีกเลี่ยง</h4>
+                <div class="space-y-3 text-sm text-gray-600">
+                    <div class="flex items-start">
+                        <span class="bg-red-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">1</span>
+                        <span>ใช้คำปฏิเสธใน prompt หลัก</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="bg-red-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">2</span>
+                        <span>เขียน prompt ยาวเกินไปโดยไม่จำเป็น</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="bg-red-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">3</span>
+                        <span>ใช้คำที่ขัดแย้งกันใน prompt เดียว</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="bg-red-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">4</span>
+                        <span>คาดหวังผลลัพธ์ที่สมบูรณ์แบบครั้งแรก</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="bg-red-600 text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">5</span>
+                        <span>ละเลยการตรวจสอบลิขสิทธิ์</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 p-4 bg-orange-50 rounded-lg">
+            <div class="flex items-start">
+                <i class="fas fa-exclamation-triangle text-orange-600 mt-1 mr-3"></i>
+                <div>
+                    <h5 class="font-medium text-orange-900">⚖️ ข้อควรระวังด้านจริยธรรม</h5>
+                    <p class="text-sm text-orange-800 mt-1">
+                        ใช้ AI สร้างภาพอย่างมีจริยธรรม หลีกเลี่ยงการสร้างภาพที่อาจทำลายชื่อเสียงผู้อื่น
+                        ไม่สร้างเนื้อหาที่ผิดกฎหมาย และระวังการละเมิดลิขสิทธิ์
+                        ควรแจ้งให้ผู้อื่นทราบว่าภาพสร้างจาก AI เมื่อนำไปใช้งาน
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
